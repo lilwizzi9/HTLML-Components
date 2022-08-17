@@ -1,3 +1,24 @@
+/* A Gift */
+/* 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⠛⢩⣴⣶⣶⣶⣌⠙⠫⠛⢋⣭⣤⣤⣤⣤⡙⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡟⢡⣾⣿⠿⣛⣛⣛⣛⣛⡳⠆⢻⣿⣿⣿⠿⠿⠷⡌⠻⣿⣿⣿⣿
+⣿⣿⣿⣿⠏⣰⣿⣿⣴⣿⣿⣿⡿⠟⠛⠛⠒⠄⢶⣶⣶⣾⡿⠶⠒⠲⠌⢻⣿⣿
+⣿⣿⠏⣡⢨⣝⡻⠿⣿⢛⣩⡵⠞⡫⠭⠭⣭⠭⠤⠈⠭⠒⣒⠩⠭⠭⣍⠒⠈⠛
+⡿⢁⣾⣿⣸⣿⣿⣷⣬⡉⠁⠄⠁⠄⠄⠄⠄⠄⠄⠄⣶⠄⠄⠄⠄⠄⠄⠄⠄⢀
+⢡⣾⣿⣿⣿⣿⣿⣿⣿⣧⡀⠄⠄⠄⠄⠄⠄⠄⢀⣠⣿⣦⣤⣀⣀⣀⣀⠄⣤⣾
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⡶⢇⣰⣿⣿⣟⠿⠿⠿⠿⠟⠁⣾⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⡟⢛⡛⠿⠿⣿⣧⣶⣶⣿⣿⣿⣿⣿⣷⣼⣿⣿⣿⣧⠸⣿⣿
+⠘⢿⣿⣿⣿⣿⣿⡇⢿⡿⠿⠦⣤⣈⣙⡛⠿⠿⠿⣿⣿⣿⣿⠿⠿⠟⠛⡀⢻⣿
+⠄⠄⠉⠻⢿⣿⣿⣷⣬⣙⠳⠶⢶⣤⣍⣙⡛⠓⠒⠶⠶⠶⠶⠖⢒⣛⣛⠁⣾⣿
+⠄⠄⠄⠄⠄⠈⠛⠛⠿⠿⣿⣷⣤⣤⣈⣉⣛⣛⣛⡛⠛⠛⠿⠿⠿⠟⢋⣼⣿⣿
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠉⠉⣻⣿⣿⣿⣿⡿⠿⠛⠃⠄⠙⠛⠿⢿⣿
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢬⣭⣭⡶⠖⣢⣦⣀⠄⠄⠄⠄⢀⣤⣾⣿
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢰⣶⣶⣶⣾⣿⣿⣿⣿⣷⡄⠄⢠⣾⣿⣿⣿
+
+
+*/
+
 :root{
     /* Colors */
     --pri: #c022ff;
@@ -6,7 +27,8 @@
     --s_alt: #9baeec;
 
     --bg: #f0f0f0;
-    --bg_dark: #b3b3b3;
+    --bg_dark: #353535;
+    --shadow: rgba(0,0,0,.2);
     --fg: #ffffff;
     --fg_dark: #3d3d3d;
     /* fixed */
@@ -29,14 +51,51 @@ button{
     width: max-content;
     padding: 5px 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 5px;
     text-transform: uppercase;
-    box-shadow: var(--bg_dark) -2px 1px 3px;
+    box-shadow: var(--shadow) -2px 1px 3px;
+}
+button:hover{
+    background-color: var(--s_alt);
+    color: var(--fg_dark);
 }
 .btn_primary{
     background-color: var(--pri);
 }
+.btn_primary:hover{
+    background-color: var(--p_alt);
+    color: var(--fg_dark);
+}
+
+/* input Tags */
+
+
+/* Attribute selector */
+
+/*selector [attr to match]  */
+input[type="text"]{
+    height: 2rem;
+    border-radius: 20px;
+    margin: 10px auto;
+    min-width: 10rem;
+    border: none;
+    color: var(--fg_dark);
+    padding: 0px 10px;
+    width: 70%;
+    box-shadow: var(--shadow) -2px 1px 3px;
+}
+input:focus{
+    border-bottom: solid var(--pri) 1px;
+    outline: none;
+}
+.solid-dark input{
+    background-color: var(--fg_dark);
+    color: var(--fg);
+
+}
+
+
 
 /* Frames */
 
@@ -44,12 +103,21 @@ button{
     background-color: var(--bg);
     margin: auto;
     border-radius: 10px ;
-    box-shadow: var(--bg_dark) -2px 2px 3px;
+    box-shadow: var(--shadow) -2px 2px 3px;
     color: var(--fg_dark);
+    max-width: 500px;
+    min-width: 400px;
+    padding: 20px;
+    display: grid;
+}
+.solid button{
+    margin: auto;
 }
 
 
 .solid-dark{
-    
+    background-color: var(--bg_dark);
+    color: var(--fg);
 }
+
 
